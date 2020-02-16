@@ -17,12 +17,15 @@ public class q100_isSameTree {
         }
         return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
+
     class TreeNode {
 
         int val;
         TreeNode left;
         TreeNode right;
+
         TreeNode (int x) { val = x; }
+
     }
 
 }

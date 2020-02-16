@@ -22,9 +22,9 @@ public class q120_minimumTotal {
 
         for (int i = 1; i < triangle.size(); i++) {
             for (int j = 0; j < i + 1; j++) {
-                int left = j == 0 ? Integer.MAX_VALUE : dp[i-1][j-1];
+                int left = j == 0 ? Integer.MAX_VALUE : dp[i - 1][j - 1];
                 int right = j == i ? Integer.MAX_VALUE : dp[i - 1][j];
-                dp[i][j] = Math.min(left,right) + triangle.get(i).get(j);
+                dp[i][j] = Math.min(left, right) + triangle.get(i).get(j);
 
                 if (i == triangle.size() - 1) {
                     min = Math.min(min, dp[i][j]);

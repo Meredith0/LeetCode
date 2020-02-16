@@ -24,6 +24,13 @@ import java.util.Stack;
  */
 public class q784_letterCasePermutation {
 
+    public static void main (String[] args) {
+        var solution = new q784_letterCasePermutation();
+        String S = "a1b2";
+        List<String> letterCasePermutation = solution.letterCasePermutation(S);
+        System.out.println(letterCasePermutation);
+    }
+
     public List<String> letterCasePermutation (String S) {
         List<String> res = new ArrayList<>();
         // 特判
@@ -56,10 +63,5 @@ public class q784_letterCasePermutation {
             stack.pop();
         }
     }
-    public static void main(String[] args) {
-        var solution = new q784_letterCasePermutation();
-        String S = "a1b2";
-        List<String> letterCasePermutation = solution.letterCasePermutation(S);
-        System.out.println(letterCasePermutation);
-    }
+
 }

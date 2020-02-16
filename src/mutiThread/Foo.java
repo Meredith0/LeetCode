@@ -9,7 +9,7 @@ import java.util.concurrent.Semaphore;
 class Foo {
 
     private final Semaphore semaphore1 = new Semaphore(1);
-    private final Semaphore     semaphore2 = new Semaphore(1);
+    private final Semaphore semaphore2 = new Semaphore(1);
 
     public Foo () {
 
@@ -33,7 +33,6 @@ class Foo {
     }
 
     public void third (Runnable printThird) throws InterruptedException {
-
 
         // printThird.run() outputs "third". Do not change or remove this line.
 

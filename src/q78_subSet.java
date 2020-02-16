@@ -8,7 +8,6 @@ import java.util.List;
  */
 public class q78_subSet {
 
-
     public static void main (String[] args) {
         q78_subSet solution = new q78_subSet();
         int[] ints = {1, 2, 3, 4, 5, 6, 7, 8, 9};
@@ -43,6 +42,5 @@ public class q78_subSet {
     //
     // private Object helper (int num) {
     // }
-
 
 }

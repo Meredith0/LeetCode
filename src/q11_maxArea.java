@@ -14,10 +14,10 @@ public class q11_maxArea {
         while (left < right) {
             //左边是短板
             if (height[left] < height[right]) {
-                ans = Math.max(ans,height[left] * (right - left));
+                ans = Math.max(ans, height[left] * (right - left));
                 left++;
-            }else {
-                ans = Math.max(ans,height[right] * (right - left));
+            } else {
+                ans = Math.max(ans, height[right] * (right - left));
                 right--;
             }
         }

@@ -30,54 +30,9 @@ import java.util.HashMap;
  *     cache.get(4);       // 返回  4
  */
 public class q146_LRUCache {
-static class LRUCache {
-
-    int key;
-    int value;
-
-    private int capacity;
-    private HashMap<Integer, Node> map;
-    linkedList list;
-
-    public LRUCache (int capacity) {
-        this.map = new HashMap<>();
-        this.list = new linkedList();
-        this.capacity = capacity;
-    }
-
-    public int get (int key) {
-        if (map.containsKey(key)) {
-            Node res = map.get(key);
-            this.list.moveNode2Tail(res);
-            return res.value;
-        }
-        return -1;
-    }
-
-    public void put (int key, int value) {
-
-        if (map.containsKey(key)) {
-            Node res = map.get(key);
-            res.value = value;
-            this.list.moveNode2Tail(res);
-        } else {
-            Node node = new Node(key, value);
-            this.list.addNode(node);
-            map.put(key, node);
-            this.capacity--;
-            if (this.capacity < 0) {
-                Node removed = this.list.removeHead();
-                map.remove(removed.key);
-                capacity++;
-            }
-        }
-    }
-
-}
-
 
     public static void main (String[] args) {
-        LRUCache cache = new LRUCache( 2 /* 缓存容量 */ );
+        LRUCache cache = new LRUCache(2 /* 缓存容量 */);
         cache.put(1, 1);
         cache.put(2, 2);
         System.out.println(cache.get(1));      // 返回  1
@@ -90,6 +45,49 @@ static class LRUCache {
 
         cache.put(2, 1);
         System.out.println(cache.get(2));
+    }
+    static class LRUCache {
+
+        int key;
+        int value;
+        linkedList list;
+        private int capacity;
+        private HashMap<Integer, Node> map;
+
+        public LRUCache (int capacity) {
+            this.map = new HashMap<>();
+            this.list = new linkedList();
+            this.capacity = capacity;
+        }
+
+        public int get (int key) {
+            if (map.containsKey(key)) {
+                Node res = map.get(key);
+                this.list.moveNode2Tail(res);
+                return res.value;
+            }
+            return -1;
+        }
+
+        public void put (int key, int value) {
+
+            if (map.containsKey(key)) {
+                Node res = map.get(key);
+                res.value = value;
+                this.list.moveNode2Tail(res);
+            } else {
+                Node node = new Node(key, value);
+                this.list.addNode(node);
+                map.put(key, node);
+                this.capacity--;
+                if (this.capacity < 0) {
+                    Node removed = this.list.removeHead();
+                    map.remove(removed.key);
+                    capacity++;
+                }
+            }
+        }
+
     }
 
 }
@@ -149,7 +147,7 @@ class linkedList {
             return;
         }
 
-      if (this.head == node) {
+        if (this.head == node) {
 
             this.head = node.next;
             this.head.pre = null;
@@ -170,16 +168,16 @@ class linkedList {
         if (head == null) {
             return null;
         }
-        Node old=this.head;
+        Node old = this.head;
         if (this.head == this.tail) {
             this.head = null;
             this.tail = null;
 
         } else {
 
-            this.head=old.next;
-            old.next=null;
-            this.head.pre=null;
+            this.head = old.next;
+            old.next = null;
+            this.head.pre = null;
         }
         return old;
     }

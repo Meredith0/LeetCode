@@ -27,8 +27,8 @@ public class q64_minPathSum {
 
         for (int i = 0; i < grid.length; i++) {
             for (int j = 0; j < grid[i].length; j++) {
-                int up = i == 0 ? 0 : grid[i-1][j];
-                int left = j == 0 ? 0 : grid[i][j-1];
+                int up = i == 0 ? 0 : grid[i - 1][j];
+                int left = j == 0 ? 0 : grid[i][j - 1];
                 if (i == 0) {
                     grid[i][j] += left;
                 } else if (j == 0) {

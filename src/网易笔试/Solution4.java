@@ -17,4 +17,5 @@ public class Solution4 {
         System.out.println(l2.get(0).getClass());
         System.out.println(l1.getClass() == l2.getClass());
     }
+
 }

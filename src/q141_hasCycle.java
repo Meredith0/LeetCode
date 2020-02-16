@@ -7,7 +7,8 @@ import java.util.HashSet;
  * @description :
  */
 public class q141_hasCycle {
-    public boolean hasCycle(ListNode head) {
+
+    public boolean hasCycle (ListNode head) {
         if (head == null || head.next == null) {
             return false;
         }
@@ -28,7 +29,7 @@ public class q141_hasCycle {
         while (head != null) {
             if (set.contains(head)) {
                 return true;
-            }else{
+            } else {
                 set.add(head);
             }
             head = head.next;

@@ -6,7 +6,8 @@ import java.util.ArrayList;
  * @description :
  */
 public class q9_isPalindrome {
-    static public boolean isPalindrome(int x) {
+
+    static public boolean isPalindrome (int x) {
         ArrayList<Integer> list = new ArrayList<>();
         while (x != 0) {
             if (x < 0) {
@@ -18,10 +19,10 @@ public class q9_isPalindrome {
             x = x / 10;
             list.add(t);
         }
-        int i=0;
-        int j = list.size()-1;
+        int i = 0;
+        int j = list.size() - 1;
         System.out.println(list);
-        while(i<j){
+        while (i < j) {
             if (list.get(i).equals(list.get(j))) {
                 i++;
                 j--;
@@ -35,4 +36,5 @@ public class q9_isPalindrome {
     public static void main (String[] args) {
         isPalindrome(-121);
     }
+
 }

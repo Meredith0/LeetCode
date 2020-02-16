@@ -21,13 +21,14 @@ public class q203_removeElements {
         return dummyNode.next;
     }
 
-    public ListNode removeElements_recursively(ListNode head, int val) {
-        if(head==null)
+    public ListNode removeElements_recursively (ListNode head, int val) {
+        if (head == null) {
             return null;
-        head.next=removeElements_recursively(head.next,val);
-        if(head.val==val){
+        }
+        head.next = removeElements_recursively(head.next, val);
+        if (head.val == val) {
             return head.next;
-        }else{
+        } else {
             return head;
         }
     }

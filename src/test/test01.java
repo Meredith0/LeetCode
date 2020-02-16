@@ -8,7 +8,8 @@ public class test01 {
 
     public static void main (String[] args) {
         Integer a = Integer.valueOf(1);
-        Integer b =  Integer.valueOf(1);;
+        Integer b = Integer.valueOf(1);
+        ;
         Integer c = Integer.valueOf(129);
         Integer d = Integer.valueOf(129);
 
@@ -25,4 +26,5 @@ public class test01 {
         System.out.println(str1 == str3);
 
     }
+
 }

@@ -9,4 +9,5 @@ public class put_apple {
     int putApple (int apple, int plate) {
         return 0;
     }
+
 }

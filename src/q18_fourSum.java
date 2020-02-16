@@ -34,10 +34,10 @@ public class q18_fourSum {
                     if (sum == target) {
                         lists.add(Arrays.asList(nums[i], nums[j], nums[left], nums[right]));
 
-                        while (left <right && nums[left] == nums[left+1]) {
+                        while (left < right && nums[left] == nums[left + 1]) {
                             left++;
                         }
-                        while (left < right && nums[right] == nums[right-1]) {
+                        while (left < right && nums[right] == nums[right - 1]) {
                             right--;
                         }
                         left++;

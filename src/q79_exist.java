@@ -16,6 +16,15 @@ public class q79_exist {
     private int row;
     private int col;
 
+    public static void main (String[] args) {
+        char[][] board = {{'a', 'b'}};
+        String word = "ba";
+        q79_exist solution = new q79_exist();
+        boolean exist = solution.exist(board, word);
+        System.out.println(exist);
+
+    }
+
     public boolean exist (char[][] board, String word) {
         row = board.length;
         if (row == 0) {
@@ -66,13 +75,4 @@ public class q79_exist {
         return x >= 0 && x < row && y >= 0 && y < col;
     }
 
-    public static void main(String[] args){
-        char[][] board = {{'a', 'b'}};
-        String word = "ba";
-        q79_exist solution = new q79_exist();
-        boolean exist = solution.exist(board, word);
-        System.out.println(exist);
-
-
-    }
 }

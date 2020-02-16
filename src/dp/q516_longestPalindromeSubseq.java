@@ -6,7 +6,7 @@ package dp;
  */
 public class q516_longestPalindromeSubseq {
 
-    static public int longestPalindromeSubseq(String s) {
+    static public int longestPalindromeSubseq (String s) {
         int n = s.length();
         int[][] f = new int[n][n];
         for (int i = n - 1; i >= 0; i--) {
@@ -21,7 +21,6 @@ public class q516_longestPalindromeSubseq {
         }
         return f[0][n - 1];
     }
-
 
     public static void main (String[] args) {
         System.out.println(longestPalindromeSubseq("bbbab"));
