@@ -1,13 +1,13 @@
+package 腾讯模拟题;
 import java.util.Arrays;
 import java.util.HashMap;
 
 /**
  * @author : Meredith
- * @date : 2019-08-12 22:08
- * @description : 两数之和
+ * @date : 2020-02-19 18:51
+ * @description :
  */
 public class q1_twoSum {
-
     public int[] twoSum(int[] nums, int target) {
         HashMap<Integer,Integer> map = new HashMap<>();
         int[] res = new int[2];
