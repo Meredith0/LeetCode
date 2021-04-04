@@ -27,8 +27,8 @@ public class q3_lengthOfLongestSubstring {
     }
 
     public static void main (String[] args) {
-        String str = "abczzabcbb";
-        System.out.println(lengthOfLongestSubstring_(str));
+        String str = "b";
+        System.out.println(lengthOfLongestSubstring(str));
     }
 
     //优化的滑动窗口, 用hashMap
@@ -44,6 +44,18 @@ public class q3_lengthOfLongestSubstring {
             map.put(s.charAt(j), j + 1);
         }
         return ans;
+    }
+
+    public static int lengthOfLongestSubstring(String s) {
+        HashMap<Character,Integer> map=new HashMap<>();
+        int res=0;
+        int newStart=0;
+        for(int i=0;i<s.length();i++){
+            newStart=Math.max(newStart,map.getOrDefault(s.charAt(i),-1)+1);
+            res=Math.max(res,i-newStart+1);
+            map.put(s.charAt(i),i);
+        }
+        return res;
     }
 
 }
